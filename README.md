@@ -26,7 +26,7 @@ Firebase를 활용한 완전한 사용자 인증 시스템입니다. 현대적�
 
 ### 1. 프로젝트 클론
 ```bash
-git clone https://github.com/your-username/firebase-auth-system.git
+git clone https://github.com/junetapa-juncheol/firebase-auth-system.git
 cd firebase-auth-system
 ```
 

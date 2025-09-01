@@ -1,0 +1,277 @@
+/* Firebase Authentication System - 커스텀 스타일 */
+
+/* 전역 변수 설정 */
+:root {
+    --primary-blue: #3B82F6;
+    --primary-green: #10B981;
+    --primary-purple: #8B5CF6;
+    --primary-orange: #F97316;
+    --primary-red: #EF4444;
+    
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-600: #4B5563;
+    --gray-800: #1F2937;
+}
+
+/* 부드러운 애니메이션 */
+* {
+    scroll-behavior: smooth;
+}
+
+/* 커스텀 그라데이션 배경 */
+.gradient-bg-blue {
+    background: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 100%);
+}
+
+.gradient-bg-green {
+    background: linear-gradient(135deg, #DCFCE7 0%, #DBEAFE 100%);
+}
+
+.gradient-bg-purple {
+    background: linear-gradient(135deg, #F3E8FF 0%, #FCE7F3 100%);
+}
+
+.gradient-bg-orange {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FEE2E2 100%);
+}
+
+/* 폼 입력 필드 향상된 스타일 */
+.form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm;
+    @apply focus:outline-none focus:ring-2 focus:border-transparent;
+    @apply transition duration-200 ease-in-out;
+    @apply placeholder-gray-400;
+}
+
+.form-input:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* 버튼 호버 효과 향상 */
+.btn-primary {
+    @apply px-6 py-3 rounded-lg font-medium;
+    @apply transition duration-200 ease-in-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    transform: translateY(0);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* 소셜 로그인 버튼 스타일 */
+.social-btn {
+    @apply w-full px-4 py-3 rounded-lg font-medium;
+    @apply transition duration-200 ease-in-out;
+    @apply flex items-center justify-center space-x-3;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.social-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 구글 버튼 */
+.btn-google {
+    @apply bg-red-500 text-white;
+    @apply hover:bg-red-600 focus:ring-red-500;
+}
+
+/* 깃허브 버튼 */
+.btn-github {
+    @apply bg-gray-800 text-white;
+    @apply hover:bg-gray-900 focus:ring-gray-500;
+}
+
+/* 카드 스타일 향상 */
+.card {
+    @apply bg-white rounded-xl shadow-lg;
+    @apply transition duration-300 ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* 모달 애니메이션 */
+.modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.hidden {
+    animation: fadeOut 0.3s ease-out;
+}
+
+.modal-content {
+    @apply bg-white rounded-lg shadow-2xl;
+    animation: slideUp 0.3s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* 키프레임 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 로딩 스피너 개선 */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 성공/에러 상태 표시 */
+.status-success {
+    @apply border-green-500 focus:ring-green-500;
+    background-color: rgba(34, 197, 94, 0.05);
+}
+
+.status-error {
+    @apply border-red-500 focus:ring-red-500;
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* 사용자 아바타 스타일 */
+.user-avatar {
+    @apply w-8 h-8 rounded-full;
+    @apply border-2 border-white shadow-sm;
+    @apply transition duration-200 ease-in-out;
+}
+
+.user-avatar:hover {
+    @apply border-blue-300;
+    transform: scale(1.05);
+}
+
+/* 드롭다운 메뉴 애니메이션 */
+.dropdown-menu {
+    @apply absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5;
+    animation: dropdownSlide 0.2s ease-out;
+}
+
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 프로필 페이지 특별 스타일 */
+.profile-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.security-score {
+    @apply text-3xl font-bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 반응형 디자인 개선 */
+@media (max-width: 640px) {
+    .modal-content {
+        @apply mx-4;
+        width: calc(100% - 2rem);
+    }
+    
+    .card {
+        @apply mx-2;
+    }
+    
+    .btn-primary,
+    .social-btn {
+        @apply text-sm py-2.5;
+    }
+}
+
+/* 다크 모드 지원 (추후 구현용) */
+@media (prefers-color-scheme: dark) {
+    /* 다크 모드 스타일은 향후 구현 */
+}
+
+/* 접근성 개선 */
+.focus-visible:focus {
+    @apply outline-none ring-2 ring-offset-2;
+}
+
+/* 고대비 모드 지원 */
+@media (prefers-contrast: high) {
+    .form-input {
+        @apply border-2 border-gray-800;
+    }
+    
+    .btn-primary {
+        @apply border-2;
+    }
+}
+
+/* 줄어든 모션 선호 사용자 지원 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 프린트 스타일 */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .modal {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+}

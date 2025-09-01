@@ -1,0 +1,57 @@
+# Firebase 설정 파일 (실제 API 키가 들어있는 경우)
+js/firebase/firebase-config.js
+
+# 환경 설정 파일
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# 로그 파일
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 운영체제 생성 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 에디터/IDE 파일
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 임시 파일
+*.tmp
+*.temp
+
+# 백업 파일
+*.bak
+*.backup
+
+# 노드 모듈 (사용하는 경우)
+node_modules/
+
+# 빌드 파일 (사용하는 경우)
+dist/
+build/
+
+# Firebase 관련
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# 개인 설정 파일
+config.json
+settings.json
+personal-config.js

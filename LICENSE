@@ -1,0 +1,43 @@
+MIT License
+
+Copyright (c) 2025 junetapa (Firebase Authentication System)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 교육 및 학습 목적 사용
+
+이 프로젝트는 Firebase Authentication 학습을 위한 교육용 예제입니다.
+
+### 허용되는 사용
+✅ 개인 학습 및 연습
+✅ 교육 기관에서의 수업 자료
+✅ 오픈소스 기여
+✅ 포트폴리오 참고 자료
+✅ 상업적 프로젝트의 시작점 (라이선스 준수)
+
+### 권장사항
+- 실제 프로덕션 사용 전 보안 검토 필요
+- Firebase 프로젝트는 개인 계정으로 새로 생성
+- 코드 수정 시 원작자 크레딧 유지 권장
+
+### 면책사항
+- 교육 목적으로 제작된 데모 코드입니다
+- 실제 서비스 운영 시 추가적인 보안 조치가 필요할 수 있습니다

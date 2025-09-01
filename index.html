@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Authentication System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/auth-styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen">
+    <!-- 헤더 -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 w-10 h-10 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Firebase Auth System</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="login.html" class="text-gray-600 hover:text-gray-800 transition duration-200">
+                        <i class="fas fa-sign-in-alt mr-2"></i>로그인
+                    </a>
+                    <a href="signup.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200">
+                        <i class="fas fa-user-plus mr-2"></i>회원가입
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl font-bold text-gray-800 mb-6">
+                    현대적인 사용자 인증 시스템
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Firebase Authentication을 활용한 완전한 사용자 관리 솔루션입니다.
+                    이메일/비밀번호 로그인부터 소셜 로그인까지 모든 기능을 지원합니다.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="signup.html" 
+                       class="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition duration-200 shadow-lg">
+                        <i class="fas fa-rocket mr-2"></i>
+                        시작하기
+                    </a>
+                    <a href="#features" 
+                       class="bg-white text-gray-800 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-50 transform hover:scale-105 transition duration-200 shadow-lg border border-gray-200">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        더 알아보기
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 스크린샷/데모 이미지 영역 -->
+            <div class="mt-16">
+                <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
+                    <div class="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-desktop text-6xl text-gray-400 mb-4"></i>
+                            <p class="text-gray-500 text-lg">라이브 데모</p>
+                            <p class="text-gray-400">실제 인증 시스템을 체험해보세요</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기능 섹션 -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">주요 기능</h2>
+                <p class="text-xl text-gray-600">완전한 사용자 인증 경험을 제공합니다</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 회원가입 -->
+                <div class="card p-8 text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-user-plus text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">안전한 회원가입</h3>
+                    <p class="text-gray-600">이메일 인증과 강력한 비밀번호 정책으로 보안을 보장합니다.</p>
+                </div>
+
+                <!-- 소셜 로그인 -->
+                <div class="card p-8 text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-users text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">소셜 로그인</h3>
+                    <p class="text-gray-600">Google과 GitHub 계정으로 간편하게 로그인할 수 있습니다.</p>
+                </div>
+
+                <!-- 비밀번호 재설정 -->
+                <div class="card p-8 text-center">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-key text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">비밀번호 재설정</h3>
+                    <p class="text-gray-600">이메일을 통한 안전한 비밀번호 재설정 기능을 제공합니다.</p>
+                </div>
+
+                <!-- 사용자 프로필 -->
+                <div class="card p-8 text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">프로필 관리</h3>
+                    <p class="text-gray-600">상세한 계정 정보와 보안 상태를 확인할 수 있습니다.</p>
+                </div>
+
+                <!-- 실시간 인증 -->
+                <div class="card p-8 text-center">
+                    <div class="bg-red-100 w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-bolt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">실시간 인증</h3>
+                    <p class="text-gray-600">Firebase의 실시간 인증 상태 감지로 즉각적인 반응을 제공합니다.</p>
+                </div>
+
+                <!-- 보안 기능 -->
+                <div class="card p-8 text-center">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">고급 보안</h3>
+                    <p class="text-gray-600">이메일 인증, 재인증, 계정 삭제 등 포괄적인 보안 기능을 지원합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기술 스택 섹션 -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">사용된 기술</h2>
+                <p class="text-xl text-gray-600">현대적이고 안정적인 기술 스택</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <i class="fab fa-js text-4xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">JavaScript ES6+</h3>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <i class="fab fa-google text-4xl text-red-500 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Firebase Auth</h3>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">Tailwind CSS</h3>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800">HTML5</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    지금 시작해보세요!
+                </h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    완전한 Firebase Authentication 시스템을 바로 체험할 수 있습니다.
+                    회원가입부터 프로필 관리까지 모든 기능을 확인해보세요.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="signup.html" 
+                       class="bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition duration-200 shadow-lg">
+                        <i class="fas fa-user-plus mr-2"></i>
+                        무료 회원가입
+                    </a>
+                    <a href="login.html" 
+                       class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-blue-600 transform hover:scale-105 transition duration-200">
+                        <i class="fas fa-sign-in-alt mr-2"></i>
+                        로그인
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="bg-blue-600 w-8 h-8 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-fire text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Firebase Auth System</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Firebase Authentication을 활용한 현대적인 사용자 인증 시스템입니다.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">주요 기능</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-check mr-2 text-green-400"></i>이메일/비밀번호 인증</li>
+                        <li><i class="fas fa-check mr-2 text-green-400"></i>소셜 로그인</li>
+                        <li><i class="fas fa-check mr-2 text-green-400"></i>비밀번호 재설정</li>
+                        <li><i class="fas fa-check mr-2 text-green-400"></i>프로필 관리</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">빠른 링크</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="signup.html" class="hover:text-white transition duration-200"><i class="fas fa-user-plus mr-2"></i>회원가입</a></li>
+                        <li><a href="login.html" class="hover:text-white transition duration-200"><i class="fas fa-sign-in-alt mr-2"></i>로그인</a></li>
+                        <li><a href="reset-password.html" class="hover:text-white transition duration-200"><i class="fas fa-key mr-2"></i>비밀번호 재설정</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-200"><i class="fas fa-question-circle mr-2"></i>도움말</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Firebase Auth System by <a href="https://github.com/junetapa" class="text-blue-400 hover:text-blue-300">junetapa</a>. 학습 목적으로 제작된 데모입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 스크롤 애니메이션을 위한 간단한 JavaScript -->
+    <script>
+        // 부드러운 스크롤 효과
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 스크롤시 카드 애니메이션 (간단한 버전)
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = 150;
+                
+                if (cardTop < window.innerHeight - cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                } else {
+                    card.style.opacity = '0.8';
+                    card.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+
+        // 페이지 로드시 초기 애니메이션
+        window.addEventListener('load', () => {
+            const heroElements = document.querySelectorAll('.hero-animate');
+            heroElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

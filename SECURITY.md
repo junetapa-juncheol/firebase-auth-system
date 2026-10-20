@@ -8,7 +8,7 @@
    ```javascript
    // ❌ 잘못된 예시 - 실제 키를 코드에 직접 입력
    const firebaseConfig = {
-     apiKey: "AIzaSyC7K8l9f2h4j6k7m8n9p0q1r2s3t4u5v6w", // 실제 키!
+     apiKey: "AIzaSyEXAMPLE-NOT-A-REAL-KEY-000000000", // 실제 키!
      authDomain: "my-real-project.firebaseapp.com",
      // ...
    };
